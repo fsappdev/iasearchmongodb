@@ -18,7 +18,7 @@ export default function QueryInterface({ onResponse }) {
     };
 
     return (
-        <Paper shadow="sm" p="lg" mb="lg" withBorder>
+        <Paper shadow="lg" p="lg" mb="lg" withBorder>
             <form onSubmit={handleSubmit}>
                 <Group gap="sm" align="flex-end">
                     <TextInput

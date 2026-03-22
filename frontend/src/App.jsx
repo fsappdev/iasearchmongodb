@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppShell, Container, Title, Text, Group, Box, ActionIcon, Menu, MantineProvider, createTheme, useMantineColorScheme } from '@mantine/core';
+import { AppShell, Container, Title, Text, Group, Box, ActionIcon, Menu, MantineProvider, createTheme, useMantineColorScheme, Paper } from '@mantine/core';
 import { IconDatabase, IconSun, IconMoon, IconPalette } from '@tabler/icons-react';
 import QueryInterface from './components/QueryInterface';
 import ResponseDisplay from './components/ResponseDisplay';
@@ -74,12 +74,14 @@ function MainLayout() {
 
             <AppShell.Main>
                 <Container size="lg" py="xl">
-                    <Box mb="xl" ta="center">
-                        <Title order={2} mb="xs">Consulta tu Base de Datos</Title>
-                        <Text c="dimmed" size="sm">
-                            Escribe en lenguaje natural y obtén resultados al instante
-                        </Text>
-                    </Box>
+                    <Paper shadow="lg" p="sm" mb="lg" withBorder>
+                        <Box mb="xl" ta="center">
+                            <Title order={2} mb="xs">Consulta tu Base de Datos</Title>
+                            <Text c="dimmed" size="sm">
+                                Escribe en lenguaje natural y obtén resultados al instante
+                            </Text>
+                        </Box>
+                    </Paper>
                     <QueryInterface onResponse={setResponse} />
                     <ResponseDisplay response={response} />
                 </Container>
